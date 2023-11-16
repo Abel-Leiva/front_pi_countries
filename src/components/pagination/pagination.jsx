@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import flechaIzquierda from "./flecha-izquierda.svg";
 import flechaDerecha from "./flecha-derecha.svg";
 import style from "./Pagination.module.css";
-
+import Button from "react-bootstrap/Button";
 export const Pagination = ({ pagina, setPagina, maximo }) => {
   const [input, setInput] = useState(1);
 
@@ -40,9 +40,9 @@ export const Pagination = ({ pagina, setPagina, maximo }) => {
 
   return (
     <div className={style.containerPagination}>
-      <button onClick={previousPage}>
+      <Button onClick={previousPage}>
         <img src={flechaIzquierda} height="25px" alt="" />
-      </button>
+      </Button>
       <input
         onChange={(e) => onChange(e)}
         onKeyDown={(e) => onKeyDown(e)}
@@ -51,12 +51,12 @@ export const Pagination = ({ pagina, setPagina, maximo }) => {
         value={input}
       />
       <p> de {Math.ceil(maximo)} </p>
-      <button
+      <Button
         disabled={pagina === Math.ceil(maximo) || pagina > Math.ceil(maximo)}
         onClick={nextPage}
       >
         <img src={flechaDerecha} height="25px" alt="" />
-      </button>
+      </Button>
     </div>
   );
 };
