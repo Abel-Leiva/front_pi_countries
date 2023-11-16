@@ -98,7 +98,7 @@ const Form = () => {
     e.preventDefault();
     if (Object.keys(errors).length === 0) {
       await axios
-        .post("http://localhost:3001/activities", form)
+        .post("https://back-countries-uxmm.onrender.com/activities", form)
         .then((response) => {
           alert("Actividad creada con éxito");
         })
