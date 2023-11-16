@@ -1,0 +1,141 @@
+.containerNav {
+  background-color: #cececafb;
+  padding: 10px;
+}
+.divNav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 120px;
+  gap: 45px;
+}
+.link {
+  font-weight: 580;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  padding: 0px 15px;
+  padding-top: 12px;
+
+  margin-right: 20px;
+  text-decoration: none;
+  border-bottom: 10px solid transparent; /* Inicialmente sin borde */
+  position: relative;
+}
+
+.link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #ffff01;
+  transition: width 0.3s ease;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+.divlogo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  background-color: var(--corlorBkWhite);
+  width: 150px;
+
+  height: 100%;
+  border: 2px solid var(--colorBlack);
+  border-radius: 0px 3px 3px 0px;
+}
+.divlogo img {
+  padding-top: 10px;
+}
+.divlogo span {
+  display: flex;
+  align-items: end;
+  padding-left: 10px;
+  padding-bottom: 4px;
+  padding-top: 6px;
+  font-size: 17px;
+}
+/* .containerNav {
+ 
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-evenly;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.link {
+  text-align: center;
+  color: black;
+  font-family: 'Poppins', sans-serif; 
+  font-size: 25px;
+  padding: 0px 10px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent; /* Inicialmente sin borde 
+  transition: border-bottom 0.9s ease; 
+}
+
+.link:hover {
+  border-bottom: 2px solid #cccccc;
+}
+
+.link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+
+  border-bottom: 3px solid #f9d807;
+  transform: scaleX(0);
+  transition: transform 0.9s ease;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+} */
+
+/* .link
+{text-align: center;
+  color:black;
+  font-family: 'Poppins', sans-serif; 
+  font-size: 25px;
+   padding: 0px 10px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent; /* Inicialmente sin borde 
+  transition: border-bottom 0.3s ease; 
+}
+.link:hover{border-bottom: 1px solid #ccc;}
+
+.link:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+
+  border-bottom: 1px solid #a41414;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+
+
+ */

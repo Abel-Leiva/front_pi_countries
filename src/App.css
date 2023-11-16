@@ -1,0 +1,15 @@
+/* App.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Resto de tus estilos */
+  background-color: #fafafa;
+}

@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  text-align: center;
+}
+.containerCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+
+  grid-column-gap: 0px;
+  padding-bottom: 20px;
+  min-height: 100vh;
+}
+.mensaje {
+  font-size: 40px;
+  margin: 50px auto;
+
+  text-align: center;
+}
