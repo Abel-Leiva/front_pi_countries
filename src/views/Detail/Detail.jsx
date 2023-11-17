@@ -13,7 +13,9 @@ const Detail = () => {
 
   useEffect(() => {
     dispatch(getIdCountry(id));
-    return dispatch(clearDetail());
+    return () => {
+      dispatch(clearDetail());
+    };
   }, []);
   const activities = country.Activities?.map((e) => {
     return {
