@@ -9,6 +9,7 @@ export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const CLEAR_FILTERS = "CLEAR_FILTERS";
 export const SEARCH_NAME = "SEACH_NAME";
 export const SET_PAGINATIONS = "SET_PAGINATIONS";
+export const CLEAR_DETAIL = "clear_detail";
 export function getAllCountries() {
   return async function (dispatch) {
     try {
@@ -84,4 +85,7 @@ export function clearFilters() {
 }
 export function setPaginations(arg) {
   return { type: SET_PAGINATIONS, payload: arg };
+}
+export function clearDetail() {
+  return { type: CLEAR_DETAIL };
 }

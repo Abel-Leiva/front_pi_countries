@@ -1,5 +1,5 @@
 import style from "./Detail.module.css";
-import { getIdCountry } from "../../redux/actions";
+import { clearDetail, getIdCountry } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -13,6 +13,7 @@ const Detail = () => {
 
   useEffect(() => {
     dispatch(getIdCountry(id));
+    return dispatch(clearDetail());
   }, []);
   const activities = country.Activities?.map((e) => {
     return {

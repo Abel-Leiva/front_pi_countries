@@ -9,6 +9,7 @@ import {
   SEARCH_NAME,
   CLEAR_FILTERS,
   SET_PAGINATIONS,
+  CLEAR_DETAIL,
 } from "../actions";
 
 let initialState = {
@@ -116,6 +117,8 @@ function rootReducer(state = initialState, action) {
       };
     case SET_PAGINATIONS:
       return { ...state, paginations: action.payload };
+    case CLEAR_DETAIL:
+      return { ...state, detail: {} };
     default:
       return state;
   }
