@@ -1,10 +1,12 @@
 import style from "./CardsContainer.module.css";
 import Card from "../card/Card";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { Pagination } from "../pagination/pagination";
+import { clearCountries } from "../../redux/actions";
 
 const CardsContainer = () => {
+  const dispatch = useDispatch();
   const failure = useSelector((state) => state.failure);
 
   const countries = useSelector((state) => state.countries);

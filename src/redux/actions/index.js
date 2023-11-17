@@ -10,6 +10,8 @@ export const CLEAR_FILTERS = "CLEAR_FILTERS";
 export const SEARCH_NAME = "SEACH_NAME";
 export const SET_PAGINATIONS = "SET_PAGINATIONS";
 export const CLEAR_DETAIL = "clear_detail";
+export const CLEAR_COUNTRIES = "clear_countries";
+/////
 export function getAllCountries() {
   return async function (dispatch) {
     try {
@@ -88,4 +90,7 @@ export function setPaginations(arg) {
 }
 export function clearDetail() {
   return { type: CLEAR_DETAIL };
+}
+export function clearCountries() {
+  return { type: CLEAR_COUNTRIES };
 }

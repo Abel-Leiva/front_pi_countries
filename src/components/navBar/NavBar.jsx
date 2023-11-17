@@ -7,7 +7,6 @@ import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   return (
     <Nav

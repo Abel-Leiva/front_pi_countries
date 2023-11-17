@@ -10,6 +10,7 @@ import {
   CLEAR_FILTERS,
   SET_PAGINATIONS,
   CLEAR_DETAIL,
+  CLEAR_COUNTRIES,
 } from "../actions";
 
 let initialState = {
@@ -119,6 +120,8 @@ function rootReducer(state = initialState, action) {
       return { ...state, paginations: action.payload };
     case CLEAR_DETAIL:
       return { ...state, detail: {} };
+    case CLEAR_COUNTRIES:
+      return { ...state, countries: [] };
     default:
       return state;
   }

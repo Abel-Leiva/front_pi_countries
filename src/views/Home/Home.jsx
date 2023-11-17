@@ -5,10 +5,12 @@ import { getActivities, getAllCountries } from "../../redux/actions";
 import style from "./Home.module.css";
 import Filters from "../../components/filters/Filters";
 const Home = () => {
+  console.log("enttro");
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllCountries());
+    // dispatch(getAllCountries());
     dispatch(getActivities());
+    return () => {};
   }, []);
   return (
     <div className={style.container}>

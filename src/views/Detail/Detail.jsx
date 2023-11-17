@@ -1,5 +1,5 @@
 import style from "./Detail.module.css";
-import { clearDetail, getIdCountry } from "../../redux/actions";
+import { clearCountries, clearDetail, getIdCountry } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
