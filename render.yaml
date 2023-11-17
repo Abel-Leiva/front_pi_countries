@@ -7,4 +7,4 @@ services:
     staticAssets:
       rewrites:
         - source: /(.*) # match any path
-          destination: / # serve index.html
+          destination: /index.html # serve index.html
