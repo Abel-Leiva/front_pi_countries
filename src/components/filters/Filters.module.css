@@ -38,3 +38,13 @@
 .containerFilters button {
   padding: 8px;
 }
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .containerFilters {
+    flex-direction: column; /* En pantallas pequeñas, cambia a columna */
+    height: auto;
+    width: 100%;
+    top: 20px;
+    padding: 10px;
+  }
+}

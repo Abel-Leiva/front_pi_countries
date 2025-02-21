@@ -21,3 +21,11 @@
 
   text-align: center;
 }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* En pantallas pequeñas, cambia a columna */
+  }
+  .containerCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

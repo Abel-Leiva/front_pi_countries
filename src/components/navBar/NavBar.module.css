@@ -139,3 +139,15 @@
 
 
  */
+@media (max-width: 768px) {
+  .containerNav {
+    flex-direction: column; /* En pantallas pequeñas, cambia a columna */
+  }
+  .divNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    gap: 20px;
+  }
+}

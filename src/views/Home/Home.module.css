@@ -1,7 +1,16 @@
 .container {
   display: flex;
-  flex-direction: row;
-
+  flex-direction: row; /* Por defecto en pantallas grandes */
   background-color: var(--corlorBkWhite);
   min-height: 100vh;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* En pantallas pequeñas, cambia a columna */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    height: auto; /* La altura se ajustará al contenido */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede */
+  }
 }
