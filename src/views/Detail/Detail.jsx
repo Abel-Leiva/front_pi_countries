@@ -74,9 +74,11 @@ const Detail = () => {
                 <span>No hay actividades creadas para este pais.</span>
               )}
             </div>
-          </div>
-          <Link to={"/home"}>
-            <button>Volver</button>
+          </div>{" "}
+          <Link to="/home">
+            <div className={style.buttonContainer}>
+              <button>Volver</button>
+            </div>
           </Link>
         </div>
       )}

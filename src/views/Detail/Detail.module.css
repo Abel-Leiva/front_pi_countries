@@ -6,13 +6,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  padding-bottom: 20px; /* Agregar espacio adicional al fondo */
+  justify-content: flex-start; /* Asegura que el contenido se alinee correctamente */
 }
-.container button {
+.buttonContainer {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-decoration: none;
+}
+.buttonContainer button {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-
+  margin-bottom: 20px;
   background-color: #ecca33;
   font-size: 17px;
   font-weight: bold;
@@ -25,15 +32,20 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.container button:hover {
+
+.buttoncontainer button:hover {
   background-color: #ffff01;
+  margin: 30px;
 }
+
 .container ul {
   list-style: none;
 }
+
 .container h2 {
   color: #fafafc;
 }
+
 .detailContainer {
   margin-top: 50px;
   display: flex;
@@ -44,32 +56,35 @@
   font-size: 20px;
   border: solid 2px #ffff01;
 }
+
 .imageContainer {
   display: flex;
   justify-content: center;
 }
+
 .imagen {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
+
 .actContainer {
   padding: 0 10px;
   width: 300px;
   height: 550px;
   text-align: center;
-  border-left: 2px solid #ffff01;
   color: white;
   text-transform: capitalize;
   overflow-y: auto;
 }
+
 .text {
   text-align: center;
-
   width: 300px;
   height: 550px;
   color: white;
 }
+
 .failure {
   font-size: 30px;
   text-align: center;
@@ -77,15 +92,50 @@
   min-height: 100vh;
   padding-top: 30px;
 }
+
+/* Mostrar borde solo en pantallas grandes */
+@media screen and (min-width: 700px) {
+  .actContainer {
+    border-left: 2px solid #ffff01;
+  }
+}
+
 @media screen and (max-width: 700px) {
+  .container {
+    justify-content: flex-start; /* Ajuste para que el contenido no se 'empuje' al fondo */
+  }
   .detailContainer {
-    /* flex-direction: column; */
     min-width: 100%;
+    padding: 5px;
   }
   .image {
     max-width: 100%;
   }
   .imageContainer {
     max-width: 100%;
+  }
+  .actContainer {
+    margin-top: 10px;
+  }
+  /* Ajuste para asegurar que el botón esté al final en pantallas pequeñas */
+  .container button {
+    margin-top: auto; /* Empuja el botón hacia abajo */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .detailContainer {
+    flex-direction: column;
+    min-width: 100%;
+    padding: 5px;
+  }
+  .image {
+    max-width: 100%;
+  }
+  .imageContainer {
+    max-width: 100%;
+  }
+  .actContainer {
+    margin-top: 10px;
   }
 }

@@ -66,7 +66,7 @@ const Filters = () => {
   };
   return (
     <div className={style.containerFilters}>
-      <Button onClick={handleClearFilters} variant="success">
+      <Button onClick={handleClearFilters} variant="primary">
         Quitar Filtros
       </Button>
       <span>Filtrar</span>
