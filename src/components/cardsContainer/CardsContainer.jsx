@@ -24,24 +24,28 @@ const CardsContainer = () => {
         <>
           <Pagination pagina={pagina} setPagina={setPagina} maximo={maximo} />
           <div>
-            <div className={style.containerCards}>
-              {countries
-                .slice(
-                  (pagina - 1) * porPagina,
-                  (pagina - 1) * porPagina + porPagina
-                )
-                .map((c, i) => {
-                  return (
-                    <Card
-                      key={i}
-                      imageFlag={c.imageFlag}
-                      name={c.name}
-                      continent={c.continent}
-                      id={c.id}
-                    />
-                  );
-                })}
-            </div>
+            {countries.length ? (
+              <div className={style.containerCards}>
+                {countries
+                  .slice(
+                    (pagina - 1) * porPagina,
+                    (pagina - 1) * porPagina + porPagina
+                  )
+                  .map((c, i) => {
+                    return (
+                      <Card
+                        key={i}
+                        imageFlag={c.imageFlag}
+                        name={c.name}
+                        continent={c.continent}
+                        id={c.id}
+                      />
+                    );
+                  })}
+              </div>
+            ) : (
+              <div className={style.mensaje}>...Cargando</div>
+            )}
           </div>
         </>
       ) : (
